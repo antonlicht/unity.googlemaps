@@ -1,0 +1,124 @@
+V1.0.8
+	Fixed issue in dfGUIManager class where completely static UI may not have been pixel perfect
+	Removed design-time early exit condition from dfGUIManager when no default Atlas or Font were assigned
+	Added dfDynamicFont component - Allows components to use Unity's dynamic fonts for text rendering
+	Added dfRichTextLabel component - Allows static rendering of HTML-like markup for "rich text"
+	Added dfGUIManager.UIScale property to allow scaling of entire UI
+	dfControl.GetClippingPlanes now always returns a value, no longer based on ClipChildren property
+	Added ScrollPositionChanged/OnScrollPositionChanged to dfScrollPanel control
+	Removed all anonymous delegates from dfObservableProperty - iOS AOT isssue
+	Added ability to switch sprite types in the inspector 
+	Fixed dfTweenEventBinding - Was using incorrect method names
+	Fixed AOT issue with dropdown control
+	Added "touch drag" simulation to scroll ScrollPanel with mouse in Editor (thanks to user 'Samha')
+	Event binding inspector will now select the Click event by default
+	dfTextbox.CursorIndex property is now public
+	Can now edit mobile keyboard settings on Textbox when current build target is not set to a mobile platform
+	Space and Enter keys will now expand the dropdown list in dfDropdown control
+	Button controls now have WordWrap property, can word-wrap text
+	Buttons now center text by default (instead of left-aligned)
+	Controls now raise Click/OnClick event with right button
+	dfListbox control now has ItemAligment property - Specifies text alignment for list items
+	dfDropdown now processes markup in text display field
+	Added FitToContents() and CenterChildControls() methods to dfPanel and dfScrollPanel controls
+	Prefab controls now reset layout information when instantiated 
+	Fixed a "Null Reference Exception" in dfGUIWizard.CreatUI() that appears in some situations
+	Resolved issue with event binding on Windows Phone 8
+	Added '\t' character conversion to dfLabel control
+	Resolved issue with GUI Wizard - Caused NULL reference exceptions in some circumstances
+	Resolved issue with raycasting multiple controls in inspector in some uncommon situations
+	Added sprite previews to dfAtlas inspector
+	Resolved inability to use file:// urls in dfWebSprite control
+	Resolved issue with anchor position affecting list item rendering in dfListbox control
+	GUI Wizard now sets camera depth property by default
+	ScrollPanel "scroll with mouse drag" now correctly disabled during drag-and-drop of child controls
+
+V1.0.7
+	Fixed issue where the scene is always flagged as having unsaved changes in the Editor
+	Added a "Create Script..." option to in-scene context menu to display the Script Wizard window
+	Fixed issue where first control property changed after a recompile didn't update view immediately
+	Added TextAlign property to dfTextbox control - Text can now be aligned Left, Center, or Right
+	Added VerticalAlignment property to dfLabel control
+	Added VerticalAlignment property to dfButton control
+	Changed default value of dfInputManager.UseTouch to TRUE
+	Control inspector behavior for ZOrder property is now consistent between top-level controls and child controls
+	Added additional color properties to dfButton class to match all possible states
+	Resolved issue where controls would not reflect changes in rotation immediately in some situations
+	Added dfTextureSprite.RenderMaterial property to expose material currently used for rendering
+	Added dfControl.SignalHierarchy method to allow controls to use event bubbling for events not defined on base class
+	Added Outline and Gradient options to dfLabel
+	Added ColorPicker example - Combines built-in controls and custom shaders to implement a color picker
+	dfTextbox control now properly raises OnKeyDown and OnKeyPress event and allows event handlers to cancel event
+	Added dfScrollPanel.UseScrollMomentum property - Toggles scrolling "momentum"
+	Fixed issue with dfAnimatedSprite component "stuttering" when looping some animations with very few frames
+	Resolved issue with rendering UI elements to a RenderTexture
+	Added GenerateNormals property to dfGUIManager class - Generates normals on output mesh for shaders that require them
+	Completely rewrote touch input processing to better support multiple touch tracking on single and multiple controls
+	Added MultiTouch/OnMultiTouch event for controls - Fired when more than one Touch is active on a single control
+	Added example scene to demonstrate touch input capabilities
+	Added example scene to demonstrate the new Outline and Gradient properties of the dfLabel control
+	Added example scene to demonstrate data binding using the dfExpressionPropertyBinding component
+	Resolved issue where label would not render if text was empty, even if it had a background specified
+	BREAKING: Removed dynamic code generation from dfEventBinding and dfTweenEventBinding when compiling to iOS targets
+	BREAKING: dfExpressionPropertyBinding binding code is #ifdef'd out on iOS targets
+
+V1.0.6
+	Changed dfCheckbox.CheckChanged, dfProgressBar.ValueChanged, and dfSlider.ValueChanged to events rather than delegate fields
+	Removed compiler warning about TouchInputManager when not targetting mobile platform
+	Fixed NullReferenceException in dfGUIManager when Game tab is active in Editor with Gizmos enabled
+	Fixed half-pixel offset issue when screen resolution is odd number in either direction
+	Resolved issue with dragging controls in editor when grid snapping active and Move tool not selected
+	Resolved InvalidOperationException in editor when displaying selection dialogs on Mac
+	Added new data binding component to perform databinding with a script expression to select/format/massage the data
+	Removed scale parameter from dfGUIManager.GetCorners()
+	Added sprite animation components (dfAnimationClip, dfSpriteAnimation)
+	Resolved issue with upgrading from older versions of DF-GUI resulting in incorrect control anchor data
+	Implemented a workaround for a bug in Unity's version of Mono on iOS - http://stackoverflow.com/q/16542915
+
+V1.0.5
+	Resolved IndexOutOfRange exception when attempting to create a Texture Atlas but no selected texture is Read/Write
+	Added dfInputManager.RetainFocus option - Determines whether control will retain focus when empty screen is clicked
+	Added ability to set design-time screen width directly to allow for wider range of design options
+	Made SetFocus(), HasFocus(), and ContainsFocus() methods of dfGUIManager class static
+	Resolved issue in dfControl.OnMouseUp() on mobile touchscreen devices - No longer defaults to Hover state on mouse up
+	dfDragHandle class now allows mouse events to properly bubble up the hierarchy
+	Added initial multi-touch support, will be extended in upcoming revisions
+	Resolved NulllReferenceException in EventBindingEditor when generating event handler signature
+	Resolved issue with drag/drop where leaving a drop target then returning to it without going over another control first would fail to fire OnDragEnter event
+	Resolved issue with dfScrollPanel control allowing user to scroll past content boundaries in some situations
+	Added touch scrolling to dfListbox and dfScrollablePanel controls
+	Added design-time "snap to grid" and options to display grid and set grid size
+	Renamed object pooling classes in examples folder (added prefix to avoid naming collisions with other assets)
+	Sprite selection dialog will now automatically scroll to show the selected sprite on display
+
+V1.0.4
+	Resolved issue with "Create Font" menu item no longer working (Showstopper)
+	Resolved issue where updating a Texture Atlas would reset its FilterMode to Bilinear - Now retains user setting
+	Create Texture Atlas and Create Font Definition menu options now correctly select new prefabs after creation
+
+V1.0.3
+	Fixed crash in Unity Editor when displaying right-click context menu in SceneView
+	Fixed incorrect values when setting layer masks in several code sections
+	Fixed error message when attempting to call dfControl.AddControl() with a component that has no Transform assigned
+	Added ability to drag-and-drop multiple Textures into Texture Atlas
+	Resolved issue where updating existing sprites in an Atlas would lose sprite border configuration
+
+V1.0.2
+	Fixed issue with design-time control alignment not resetting control layouts
+	Made the ResetLayout(), SuspendLayout(), and ResumeLayout() functions on dfControl class public
+	Changed visibility of a number of methods on several classes to public to allow compiling library into a DLL 
+	Fixed missing collider on newly-created GUIManager objects, which would result in design-time problems like failure to display context menu
+	Fixed issue where a top-level dfPanel control with no background would cause child controls to not render due to a bug in the draw call code.
+	Resolved an issue where Unity would have the falling fits if you try to render a sprite preview while multiple objects are selected in the Editor
+
+V1.0.1
+	Fixed inability to select multiple controls in editor
+	Fixed debug information display in GUIManager inspector
+	Added align/distribute/center editor functionality when multiple controls are selected
+	Added ability to resize multiple controls at one time via drag handles in SceneView
+	Added on-screen rulers for dfGUIManager at design time
+	Added help buttons to GUIManager and Control inspectors to open online documentation
+
+V1.0 
+	Initial release
+	

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{6F0C30BA-B4DD-6371-328A-020CC2F324B9}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_0;UNITY_4_3;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;ENABLE_DUCK_TYPING</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\IDFMultiRender.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfAnimationClipInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfButtonInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfCheckboxInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfControlInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfDragHandleInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfDropdownListInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfEditorUtil.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfFontDefinitionInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfGUIManagerInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfGUIWizard.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfLabelInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfListboxInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfPanelInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfPrefabSelectionDialog.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfProgressbarInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfRadialSpriteInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfResizeHandleInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfScriptWizard.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfScrollPanelInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfScrollbarInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfSlicedSpriteInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfSliderInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfSpriteInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfSpriteSelectionDialog.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfTabPageContainerInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfTabstripInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfTextboxInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfTextureAtlasInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfTexturePacker.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfTextureSpriteInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfTiledSpriteInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Editor\dfWebSpriteInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Editor\EventBindingEditor.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Editor\KeyBindingEditor.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Editor\PropertyBindingEditor.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Editor\ProxyPropertyBindingEditor.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Editor\dfDataObjectProxyInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Editor\dfExpressionBindingInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Editor\dfExpressionEditorWindow.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Editor\dfSpriteAnimationInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Editor\dfTextEditorWindow.cs" />
+     <Compile Include="Assets\Daikon Forge\Editor\dfUpgradeHelper.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\ActionBar\Editor\SpellInventoryInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\ActionBar\Editor\SpellSlotInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\Rich Text\Editor\dfDynamicFontInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\Rich Text\Editor\dfRichTextLabelInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Editor\TweenColor32Inspector.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Editor\TweenColorInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Editor\TweenEventBindingInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Editor\TweenFloatInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Editor\TweenGroupInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Editor\TweenInspectorBase.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Editor\TweenRotationInspector.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Editor\TweenVector2Inspector.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Editor\TweenVector3Inspector.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Editor\TweenVector4Inspector.cs" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-24px.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Labels\Atlas\Huggable32.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-12px.fnt" />
+     <None Include="Assets\Daikon Forge\DFGUI\Shaders\Default UI Shader.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\OpenSans-Semibold-18px.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\title-text.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\OpenSans-SemiBold-56px.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\AnimatedSprite\OpenSans-Semibold-18px.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Resources\Fonts\SIL Open Font License.txt" />
+     <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColorPickerHue.shader" />
+     <None Include="Assets\Daikon Forge\Changelog.txt" />
+     <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColoredCharacterShader.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColorPickerHSB.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\OpenSans-Semibold-14px.fnt" />
+     <None Include="Assets\Sprites-Alpha.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Labels\Atlas\Huggable.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Resources\Fonts\OpenSans Font License.txt" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-20px.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-16px.fnt" />
+ <Reference Include="dfScriptLite">
+ <HintPath>Assets\Daikon Forge\DataBinding\Plugins\dfScriptLite.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\iPhonePlayer\EditorExtensions\UnityEditor.iOS.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WP8.Extensions">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\WP8Support\EditorExtensions\UnityEditor.WP8.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Metro.Extensions">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\MetroSupport\EditorExtensions\UnityEditor.Metro.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.BB10.Extensions">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\BB10Player\EditorExtensions\UnityEditor.BB10.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\EditorExtensions\UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{BEF10EF5-65F1-E7E4-5FFC-1A589E5F9E26}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

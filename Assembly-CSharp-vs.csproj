@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{BEF10EF5-65F1-E7E4-5FFC-1A589E5F9E26}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_0;UNITY_4_3;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\IDFMultiRender.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfAnimationClip.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfAtlas.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfButton.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfCheckbox.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfChecksumUtil.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfClippingUtil.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfControl.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfDragHandle.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfDropdown.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfEnumerations.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfEvents.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfFont.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfFontBase.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfGUICamera.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfGUIManager.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfInputManager.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfInteractiveBase.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfLabel.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfLanguageCodes.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfLanguageManager.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfList.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfListbox.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfPanel.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfProgressBar.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfRadialSprite.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfRenderData.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfResizeHandle.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfScrollPanel.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfScrollbar.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfSlicedSprite.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfSlider.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfSprite.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfSupportClasses.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfTabContainer.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfTabstrip.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfTextbox.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfTextureSprite.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfTiledSprite.cs" />
+     <Compile Include="Assets\Daikon Forge\DFGUI\Scripts\dfWebSprite.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Scripts\IDataBindingComponent.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Scripts\IObservableValue.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Scripts\dfComponentMemberInfo.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Scripts\dfControlKeyBinding.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Scripts\dfDataObjectProxy.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Scripts\dfEventBinding.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Scripts\dfEventProxyAttribute.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Scripts\dfExpressionPropertyBinding.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Scripts\dfObservableProperty.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Scripts\dfPropertyBinding.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Scripts\dfProxyPropertyBinding.cs" />
+     <Compile Include="Assets\Daikon Forge\DataBinding\Scripts\dfSpriteAnimation.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\ActionBar\Scripts\ActionBarViewModel.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\ActionBar\Scripts\ActionbarsDragCursor.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\ActionBar\Scripts\ActionbarsHoverEvents.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\ActionBar\Scripts\ActionbarsTooltip.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\ActionBar\Scripts\MessageDisplay.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\ActionBar\Scripts\ShowSpellWindow.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\ActionBar\Scripts\SpellDefinition.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\ActionBar\Scripts\SpellInventory.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\ActionBar\Scripts\SpellSlot.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Color Picker\Scripts\AutoRotateModel.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Color Picker\Scripts\ColorFieldSelector.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Color Picker\Scripts\ColorHexField.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Color Picker\Scripts\ColorPickerDrag.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Color Picker\Scripts\ColorPickerPreset.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Color Picker\Scripts\HSBColor.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Color Picker\Scripts\HueSliderSelector.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Color Picker\Scripts\RGBSliders.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Color Picker\Scripts\SetCharacterColor.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Containers\Scripts\AutoArrangeDemoItem.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Containers\Scripts\AutoArrangeOptions.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Data Binding\ExpressionBindingDemoModel.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Drag and Drop\DnDExample_DragCursor.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Drag and Drop\DndExample_InventoryItem.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoAchievementInfo.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoAchievementListItem.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoAchievementsGrid.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoBrowseGrid.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoBrowseGridListItem.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoControlField.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoGrid.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoHostedGameInfo.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoItemBase.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoLeaderboardGrid.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoLeaderboardItem.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoLeaderboardListItem.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoListField.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoMenuItem.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoMenuPanel.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoOptionPanel.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoPanelBase.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoQuitOnClick.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\DemoShowSelectedTexture.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Game Menu\Scripts\Gravatar.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\ObjectPooling\Scripts\dfPoolManager.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\ObjectPooling\Scripts\dfPooledObject.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Rich Text\rtSampleEvents.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Scripts\AnimatePopup.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Scripts\ControlNavigation.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Scripts\DebugRenderInfo.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Scripts\FPSCounter.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Scripts\LoadLevelByName.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Scripts\PlatformVisibility.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Scripts\QuitOnClick.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Scripts\RuntimePixelPerfect.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Scripts\SetMobileResolution.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Scripts\WindowTilt.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Sprites\Scripts\HoverAnimEvents.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Sprites\Scripts\SpriteProperties.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Tooltip\DemoFloatingTooltip.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Touch\TouchDragSourceEvents.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Touch\TouchStateDisplayEvents.cs" />
+     <Compile Include="Assets\Daikon Forge\Examples\Touch\TouchThrow.cs" />
+     <Compile Include="Assets\Daikon Forge\Rich Text\Scripts\dfDynamicFont.cs" />
+     <Compile Include="Assets\Daikon Forge\Rich Text\Scripts\dfMarkupBox.cs" />
+     <Compile Include="Assets\Daikon Forge\Rich Text\Scripts\dfMarkupElement.cs" />
+     <Compile Include="Assets\Daikon Forge\Rich Text\Scripts\dfMarkupImageCache.cs" />
+     <Compile Include="Assets\Daikon Forge\Rich Text\Scripts\dfMarkupParser.cs" />
+     <Compile Include="Assets\Daikon Forge\Rich Text\Scripts\dfMarkupStyle.cs" />
+     <Compile Include="Assets\Daikon Forge\Rich Text\Scripts\dfMarkupTags.cs" />
+     <Compile Include="Assets\Daikon Forge\Rich Text\Scripts\dfRichTextLabel.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfAnimatedValue.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfEasingFunctions.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfEasingType.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenColor.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenColor32.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenComponent.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenComponentBase.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenEnumerations.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenEventBinding.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenFloat.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenGroup.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenPlayableBase.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenRotation.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenVector2.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenVector3.cs" />
+     <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenVector4.cs" />
+     <Compile Include="Assets\Scripts\Bug.cs" />
+     <Compile Include="Assets\Scripts\MapTest\AssetLoader.cs" />
+     <Compile Include="Assets\Scripts\MapTest\CompassTest.cs" />
+     <Compile Include="Assets\Scripts\MapTest\Grid\Grid.cs" />
+     <Compile Include="Assets\Scripts\MapTest\Grid\ICell.cs" />
+     <Compile Include="Assets\Scripts\MapTest\Grid\SmartGrid.cs" />
+     <Compile Include="Assets\Scripts\MapTest\LRUSpriteDictionary.cs" />
+     <Compile Include="Assets\Scripts\MapTest\MapGrid.cs" />
+     <Compile Include="Assets\Scripts\MapTest\MapUtils.cs" />
+     <Compile Include="Assets\Scripts\MapTest\RefCounted.cs" />
+     <Compile Include="Assets\Scripts\MapTest\RefCountedSprite.cs" />
+     <Compile Include="Assets\Scripts\MapTest\RenderCell.cs" />
+     <Compile Include="Assets\Scripts\S2Test.cs" />
+     <Compile Include="Assets\Scripts\s2.cs" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-24px.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Labels\Atlas\Huggable32.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-12px.fnt" />
+     <None Include="Assets\Daikon Forge\DFGUI\Shaders\Default UI Shader.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\OpenSans-Semibold-18px.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\title-text.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\OpenSans-SemiBold-56px.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\AnimatedSprite\OpenSans-Semibold-18px.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Resources\Fonts\SIL Open Font License.txt" />
+     <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColorPickerHue.shader" />
+     <None Include="Assets\Daikon Forge\Changelog.txt" />
+     <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColoredCharacterShader.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColorPickerHSB.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\OpenSans-Semibold-14px.fnt" />
+     <None Include="Assets\Sprites-Alpha.shader" />
+     <None Include="Assets\Daikon Forge\Examples\Labels\Atlas\Huggable.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Resources\Fonts\OpenSans Font License.txt" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-20px.fnt" />
+     <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-16px.fnt" />
+ <Reference Include="dfScriptLite">
+ <HintPath>Assets\Daikon Forge\DataBinding\Plugins\dfScriptLite.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

@@ -184,6 +184,7 @@
      <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenVector2.cs" />
      <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenVector3.cs" />
      <Compile Include="Assets\Daikon Forge\Tweening\Scripts\dfTweenVector4.cs" />
+     <Compile Include="Assets\Marker.cs" />
      <Compile Include="Assets\Scripts\Bug.cs" />
      <Compile Include="Assets\Scripts\MapTest\AssetLoader.cs" />
      <Compile Include="Assets\Scripts\MapTest\CompassTest.cs" />
@@ -198,7 +199,9 @@
      <Compile Include="Assets\Scripts\MapTest\RenderCell.cs" />
      <Compile Include="Assets\Scripts\S2Test.cs" />
      <Compile Include="Assets\Scripts\s2.cs" />
+     <Compile Include="Assets\TouchInput.cs" />
      <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-24px.fnt" />
+     <None Include="Assets\Shaders\Sprites-ExtendedDiffuse.shader" />
      <None Include="Assets\Daikon Forge\Examples\Labels\Atlas\Huggable32.fnt" />
      <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-12px.fnt" />
      <None Include="Assets\Daikon Forge\DFGUI\Shaders\Default UI Shader.shader" />
@@ -212,7 +215,7 @@
      <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColoredCharacterShader.shader" />
      <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColorPickerHSB.shader" />
      <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\OpenSans-Semibold-14px.fnt" />
-     <None Include="Assets\Sprites-Alpha.shader" />
+     <None Include="Assets\Shaders\Sprites-Alpha.shader" />
      <None Include="Assets\Daikon Forge\Examples\Labels\Atlas\Huggable.fnt" />
      <None Include="Assets\Daikon Forge\Examples\Resources\Fonts\OpenSans Font License.txt" />
      <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-20px.fnt" />

@@ -104,6 +104,7 @@
      <Compile Include="Assets\Daikon Forge\Tweening\Editor\TweenVector3Inspector.cs" />
      <Compile Include="Assets\Daikon Forge\Tweening\Editor\TweenVector4Inspector.cs" />
      <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-24px.fnt" />
+     <None Include="Assets\Shaders\Sprites-ExtendedDiffuse.shader" />
      <None Include="Assets\Daikon Forge\Examples\Labels\Atlas\Huggable32.fnt" />
      <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-12px.fnt" />
      <None Include="Assets\Daikon Forge\DFGUI\Shaders\Default UI Shader.shader" />
@@ -117,7 +118,7 @@
      <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColoredCharacterShader.shader" />
      <None Include="Assets\Daikon Forge\Examples\Color Picker\Shaders\ColorPickerHSB.shader" />
      <None Include="Assets\Daikon Forge\Examples\Skins\TechBlue\OpenSans-Semibold-14px.fnt" />
-     <None Include="Assets\Sprites-Alpha.shader" />
+     <None Include="Assets\Shaders\Sprites-Alpha.shader" />
      <None Include="Assets\Daikon Forge\Examples\Labels\Atlas\Huggable.fnt" />
      <None Include="Assets\Daikon Forge\Examples\Resources\Fonts\OpenSans Font License.txt" />
      <None Include="Assets\Daikon Forge\Examples\Skins\Fantasy\Fonts\Open Sans\Heiro-OpenSans-Regular-20px.fnt" />

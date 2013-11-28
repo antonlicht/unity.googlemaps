@@ -4,12 +4,16 @@ public class RenderCell : MonoBehaviour, ICell<RefCountedSprite>
 {
     public RefCountedSprite Content;
     private SpriteRenderer _renderer;
+    private static Sprite _defaultSprite;
 
     private void Awake()
     {
         _renderer = GetComponent<SpriteRenderer>();
         if (!_renderer)
             _renderer = gameObject.AddComponent<SpriteRenderer>();
+        if (_defaultSprite == null)
+            _defaultSprite = (Sprite)Resources.Load("Materials/DefaultTile", typeof(Sprite));
+        _renderer.sprite = _defaultSprite;
     }
 
     public RefCountedSprite GetContent()
@@ -29,11 +33,13 @@ public class RenderCell : MonoBehaviour, ICell<RefCountedSprite>
         Content = content;
         if (Content == null)
         {
-            _renderer.sprite = null;
+            _renderer.sprite = _defaultSprite;
             return;
         }
         Content.SpriteChanged += OnSpriteLoaded;
         _renderer.sprite = Content.Sprite;
+        if (_renderer.sprite == null)
+            _renderer.sprite = _defaultSprite;
         Content.AddRef();
     }
 

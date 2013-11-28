@@ -59,8 +59,15 @@ public class AssetLoader : MonoBehaviour
     private IEnumerator LoadSprite()
     {
         string url = _queue.Keys.First();
+        Debug.Log("Load " + url);
         WWW webRequest = new WWW(url);
         yield return webRequest;
+        if (!String.IsNullOrEmpty(webRequest.error))
+        {
+            Debug.LogError(webRequest.error);
+            _isLoading = false;
+            yield break;
+        }
         Texture2D tex = webRequest.texture;
         Sprite loadedSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), Pivot, PixelsToUnit);
         if (_queue[url] != null)

@@ -31,7 +31,7 @@ public class MapGrid : MonoBehaviour
         Height = dim * UnitsPerTile;
         Dict = new LRUSpriteDictionary((dim + 1) * (dim + 1));
         Grid = new SmartGrid<RenderCell, RefCountedSprite>(Cells.ToArray(), dim, dim);
-        _loadedPosition = new MapUtils.ProjectedPos(MapRadius, MapRadius, 18, 0, 0);
+        _loadedPosition = new MapUtils.ProjectedPos(MapRadius, MapRadius, ZoomLevel, 0, 0);
         _position = new Vector3();
     }
 
@@ -43,13 +43,15 @@ public class MapGrid : MonoBehaviour
             for (int j = 0; j < x; j++)
             {
                 GameObject obj = new GameObject("tile_" + j + "_" + i);
-                obj.AddComponent<SpriteRenderer>();
+                SpriteRenderer renderer = obj.AddComponent<SpriteRenderer>();
+                renderer.material = (Material)Resources.Load("Materials/MapTile", typeof(Material));
                 Cells.Add(obj.AddComponent<RenderCell>());
                 Vector3 position = new Vector3();
                 position.x = j * UnitsPerTile;
                 position.y = -i * UnitsPerTile;
                 obj.transform.parent = Root;
                 obj.transform.localPosition = position;
+                obj.transform.localRotation = Quaternion.identity;
             }
         }
     }

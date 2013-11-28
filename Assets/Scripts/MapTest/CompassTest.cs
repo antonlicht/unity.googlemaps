@@ -2,34 +2,73 @@
 
 public class CompassTest : MonoBehaviour
 {
-
     public float Latitude;
     public float Longitude;
     public MapGrid Grid;
+    public GameObject CameraRig;
 
-    public const float moveSpeed = 0.003f;
+    public const float MoveSpeed = 1f;
+    public const float MoveRadius = 1f;
 
-    void Start()
+
+    void Awake()
     {
         Latitude = 52.50451f;
         Longitude = 13.39699f;
-        //Input.location.Start();
-        //Input.compass.enabled = true;
+
+        Input.location.Start();
+        Input.compass.enabled = true;
 
     }
 
     void Update()
     {
-        //if (Input.location.status != LocationServiceStatus.Running)
-        //    return;
-        //SetLocation();
+        //Rotation:
+        Vector3 cameraRot = CameraRig.transform.eulerAngles;
+        CameraRig.transform.eulerAngles = new Vector3(cameraRot.x, TouchInput.Singleton.GetRotation(cameraRot.y, CameraRig.transform.position, true), cameraRot.z);
+
+        //Activate Location Service:
+#if UNITY_EDITOR
         if (Input.touchCount > 0)
         {
             Touch touch = Input.touches[0];
-            Longitude -= touch.deltaPosition.x * moveSpeed * moveSpeed;
-            Latitude -= touch.deltaPosition.y * moveSpeed * moveSpeed;
+            Longitude -= touch.deltaPosition.x * 0.003f * 0.003f;
+            Latitude -= touch.deltaPosition.y * 0.003f * 0.003f;
         }
-        Grid.CurrentPosition = MapUtils.GeographicToProjection(new Vector2(Longitude, Latitude), 18);
+#else
+
+        if (Input.location.status != LocationServiceStatus.Running) return;
+        SetLocation();
+#endif
+
+        //New Position:
+        MapUtils.ProjectedPos newPosition = MapUtils.GeographicToProjection(new Vector2(Longitude, Latitude), Grid.ZoomLevel);
+        if ((newPosition - Grid.CurrentPosition).Magnitude < MoveRadius)
+            Grid.CurrentPosition = MapUtils.ProjectedPos.Lerp(Grid.CurrentPosition, newPosition,
+                                                              Time.deltaTime * MoveSpeed);
+        else
+            Grid.CurrentPosition = newPosition;
+    }
+
+    private float GetRotation()
+    {
+        Debug.Log(Input.touchCount);
+        if (Input.touchCount > 1)
+        {
+
+            Touch touch1 = Input.touches[0];
+            Touch touch2 = Input.touches[1];
+
+            if (touch1.deltaTime < 0.00001f)
+                return 0f;
+            Vector2 t1Start = touch1.position - touch1.deltaPosition;
+            Vector2 t1End = touch1.position;
+            Vector2 t2Start = touch2.position - touch2.deltaPosition;
+            Vector2 t2End = touch2.position;
+            float sign = ((t2Start - t1Start).y / (t2Start - t1Start).x > (t2End - t1End).y / (t2End - t1End).x) ? -1f : 1f;
+            return sign * Vector2.Angle(t2Start - t1Start, t2End - t1End) * Time.deltaTime / touch1.deltaTime;
+        }
+        return 0;
     }
 
 
@@ -37,6 +76,23 @@ public class CompassTest : MonoBehaviour
     {
         Longitude = Input.location.lastData.longitude;
         Latitude = Input.location.lastData.latitude;
+    }
+
+    private void OnApplicationPause(bool paused)
+    {
+        if (paused)
+        {
+            Debug.Log("Pause App.");
+            Input.location.Stop();
+            Input.compass.enabled = false;
+        }
+        else
+        {
+            Debug.Log("Resume App.");
+            Input.location.Start();
+            Input.compass.enabled = true;
+        }
+
     }
 
 }

@@ -29,11 +29,12 @@ public class CompassTest : MonoBehaviour
 
         //Activate Location Service:
 #if UNITY_EDITOR
-        if (Input.touchCount > 0)
+        if (Input.GetMouseButton(0))
         {
-            Touch touch = Input.touches[0];
-            Longitude -= touch.deltaPosition.x * 0.003f * 0.003f;
-            Latitude -= touch.deltaPosition.y * 0.003f * 0.003f;
+			Debug.Log("Test"+Input.GetAxis("Mouse X")+" "+Input.GetAxis("Mouse Y"));
+			Vector2 delta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")); 
+			Longitude -= delta.x*0.0001f;
+			Latitude -= delta.y*0.0001f;
         }
 #else
 

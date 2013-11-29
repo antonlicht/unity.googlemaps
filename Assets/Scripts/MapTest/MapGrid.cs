@@ -52,6 +52,7 @@ public class MapGrid : MonoBehaviour
                 obj.transform.parent = Root;
                 obj.transform.localPosition = position;
                 obj.transform.localRotation = Quaternion.identity;
+				obj.transform.localScale = new Vector3(1f,1f,1f);
             }
         }
     }

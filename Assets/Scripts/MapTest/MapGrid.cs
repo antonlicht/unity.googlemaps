@@ -98,7 +98,8 @@ public class MapGrid : MonoBehaviour
         }
         sprite = new RefCountedSprite();
         Dict.Add(new LRUSpriteDictionary.SpriteID(x, y), sprite);
-        AssetLoader.Loader.Enqueue(string.Format("http://mts1.google.com/vt/x={0}&y={1}&z={2} ", x, y, ZoomLevel), sprite.SetSprite);
+        AssetLoader.Loader.Enqueue(string.Format("http://mts1.google.com/vt/lyrs=m@245168067&src=apiv3&hl=de&x={0}&y={1}&z={2}&apistyle=s.e%3Al%7Cp.v%3Aoff%2Cp.il%3Atrue%7Cp.w%3A2.4%7Cp.h%3A%2300f6ff%7Cp.s%3A54%2Cs.t%3A6%7Cp.c%3A%23ff92c2d6&style=47,37%7Csmartmaps%20(256x256)", x, y, ZoomLevel), sprite.SetSprite);
+        //AssetLoader.Loader.Enqueue(string.Format("http://mts1.google.com/vt/x={0}&y={1}&z={2} ", x, y, ZoomLevel), sprite.SetSprite);
         return sprite;
     }
 
